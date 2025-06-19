@@ -69,11 +69,3 @@ Ready to share with friends? See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete s
 DATABASE_URL=postgresql://username:password@host:port/database
 NODE_ENV=development
 ```
-
-## 🤝 Contributing
-
-Feel free to open issues and pull requests!
-
-## 📝 License
-
-MIT - Feel free to use for personal or commercial projects.
