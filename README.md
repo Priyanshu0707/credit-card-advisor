@@ -15,9 +15,10 @@ AI-powered credit card recommendation app with personalized chat advisor.
 - **📱 Responsive**: Works perfectly on mobile and desktop
 - **⚡ Fast**: Built with modern tech stack
 
-## 🚀 Live Demo
+## 🚀 Demo Video
 
-[Your app will be here after deployment]
+[screen-capture.webm](https://github.com/user-attachments/assets/822320b1-f4c8-4a6a-894b-9073dbe89633)
+
 
 ## 🛠️ Tech Stack
 
@@ -69,3 +70,4 @@ Ready to share with friends? See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete s
 DATABASE_URL=postgresql://username:password@host:port/database
 NODE_ENV=development
 ```
+
