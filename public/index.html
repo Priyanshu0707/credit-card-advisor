@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Advisor - AI-Powered Recommendations</title>
+    <meta name="description" content="Get personalized credit card recommendations with our AI advisor. Compare cards and find the best offers for your spending habits.">
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // Fallback for client-side routing
+        window.addEventListener('load', function() {
+            if (window.location.pathname !== '/' && !window.location.pathname.startsWith('/api')) {
+                fetch('/api/cards')
+                    .then(response => {
+                        if (!response.ok) {
+                            document.body.innerHTML = '<h1>Loading...</h1><p>Initializing Credit Card Advisor...</p>';
+                        }
+                    })
+                    .catch(() => {
+                        document.body.innerHTML = '<h1>Credit Card Advisor</h1><p>Loading application...</p>';
+                    });
+            }
+        });
+    </script>
+</body>
+</html>

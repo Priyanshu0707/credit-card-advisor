@@ -6,11 +6,8 @@
       "use": "@vercel/node"
     },
     {
-      "src": "client/**",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "../dist/public"
-      }
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -20,13 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/api/index.ts"
+      "dest": "/public/index.html"
     }
-  ],
-  "buildCommand": "npm run build",
-  "functions": {
-    "api/index.ts": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
