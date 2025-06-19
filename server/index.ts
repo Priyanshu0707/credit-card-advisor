@@ -47,13 +47,25 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  // Setup based on environment
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
-    serveStatic(app);
+    // Production: serve static files and handle routing
+    const path = await import('path');
+    const publicPath = path.join(process.cwd(), 'dist', 'public');
+    
+    // Serve static files
+    app.use(express.static(publicPath));
+    
+    // Handle client-side routing
+    app.get('*', (req, res) => {
+      if (req.path.startsWith('/api')) {
+        res.status(404).json({ error: 'API endpoint not found' });
+      } else {
+        res.sendFile(path.join(publicPath, 'index.html'));
+      }
+    });
   }
 
   // ALWAYS serve the app on port 5000
