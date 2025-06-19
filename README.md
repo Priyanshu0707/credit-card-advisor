@@ -17,7 +17,7 @@ AI-powered credit card recommendation app with personalized chat advisor.
 
 ## 🚀 Demo Video
 
-[screen-capture.webm](https://github.com/user-attachments/assets/822320b1-f4c8-4a6a-894b-9073dbe89633)
+[Application-Demo.webm](https://github.com/user-attachments/assets/822320b1-f4c8-4a6a-894b-9073dbe89633)
 
 
 ## 🛠️ Tech Stack
